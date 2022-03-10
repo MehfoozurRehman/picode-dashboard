@@ -10,3 +10,23 @@ body {
   padding: 0;
   background-color: #efefef;
 }
+.container {
+  width: 100vw;
+  padding: 2em;
+  min-height: 100vh;
+  display: flex;
+}
+.container__sidebar {
+  width: 20%;
+  border-radius: 20px;
+  padding: 2em;
+  background: url("./assets/sidebarBg.png");
+}
+.container__sidebar__header {
+  display: flex;
+  align-items: center;
+}
+.container__sidebar__header__img {
+  width: 80px;
+  height: 80px;
+}
