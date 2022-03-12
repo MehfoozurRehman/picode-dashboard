@@ -1,5 +1,5 @@
 {
-  "name": "picode-dashboard",
+  "name": "finfac-dashboard",
   "private": true,
   "version": "0.0.0",
   "scripts": {
@@ -8,10 +8,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^33.0.0",
+    "@ckeditor/ckeditor5-react": "^4.0.0",
+    "chart.js": "^3.7.1",
     "react": "^17.0.2",
+    "react-chartjs-2": "^4.0.1",
     "react-dom": "^17.0.2",
+    "react-feather": "^2.0.9",
     "react-router-dom": "^6.2.2",
-    "sass": "^1.49.8"
+    "react-select": "^5.2.2",
+    "react-toggle": "^4.1.2",
+    "sass": "^1.49.9"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^1.0.7",
