@@ -224,9 +224,30 @@ body {
   height: 100%;
   width: 100%;
 }
+.container__sidebar__header {
+  display: flex;
+  align-items: center;
+  padding: 0em 1em;
+  height: 10%;
+}
+.container__sidebar__header__img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50px;
+  margin-right: 1em;
+}
+.container__sidebar__header__content__name {
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+.container__sidebar__header__content__link {
+  color: white;
+  font-size: 13px;
+}
 .container__sidebar__content {
   width: 100%;
-  height: 87%;
+  height: 77%;
   overflow-y: scroll;
   padding: 1em;
 }

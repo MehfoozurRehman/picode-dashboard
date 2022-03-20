@@ -179,22 +179,22 @@ export default function DashboardPanel() {
             </div>
           </div>
           <div className="dashboard__panel__content__col">
-            <Posts />
-            <Pages />
+            <TotalCustomer />
+            <TotalDiscount />
           </div>
           <div className="dashboard__panel__content__col">
-            <TrafficSource />
+            <TotalReceipt />
           </div>
         </div>
         <div className="dashboard__panel__content__row">
-          <TotalEntries />
+          <TotalPurchases />
         </div>
       </div>
     </div>
   );
 }
 
-function TrafficSource({}) {
+function TotalReceipt({}) {
   ChartJS.register(ArcElement, Tooltip, Legend);
   const data = {
     labels: ["Red", "Blue", "Yellow"],
@@ -210,7 +210,7 @@ function TrafficSource({}) {
   return (
     <div className="dashboard__panel__content__traffic__source">
       <div className="dashboard__panel__content__traffic__source__heading">
-        Traffic Source
+        Total Receipt
       </div>
       <Doughnut
         data={data}
@@ -225,7 +225,7 @@ function TrafficSource({}) {
             style={{ background: "#9A7CB8" }}
           ></div>
           <div className="dashboard__panel__content__traffic__source__content__entry__data">
-            Search Engine
+            Amount
           </div>
         </div>
         <div className="dashboard__panel__content__traffic__source__content__entry">
@@ -234,7 +234,7 @@ function TrafficSource({}) {
             style={{ background: "#37CE69" }}
           ></div>
           <div className="dashboard__panel__content__traffic__source__content__entry__data">
-            Direct Click
+            Amount
           </div>
         </div>
         <div className="dashboard__panel__content__traffic__source__content__entry">
@@ -243,7 +243,7 @@ function TrafficSource({}) {
             style={{ background: "#CDD5E1" }}
           ></div>
           <div className="dashboard__panel__content__traffic__source__content__entry__data">
-            Bookmark Click
+            Amount
           </div>
         </div>
       </div>
@@ -251,7 +251,7 @@ function TrafficSource({}) {
   );
 }
 
-function Posts({}) {
+function TotalCustomer({}) {
   ChartJS.register(
     CategoryScale,
     LinearScale,
@@ -312,7 +312,7 @@ function Posts({}) {
     <div className="dashboard__panel__content__post__created">
       <div className="dashboard__panel__content__post__created__header">
         <div className="dashboard__panel__content__post__created__header__heading">
-          Posts Created
+          Total Customer
         </div>
         <input
           type="month"
@@ -325,7 +325,7 @@ function Posts({}) {
   );
 }
 
-function Pages({}) {
+function TotalDiscount({}) {
   ChartJS.register(ArcElement, Tooltip, Legend);
   const data = {
     labels: ["Red", "Blue"],
@@ -341,15 +341,17 @@ function Pages({}) {
   return (
     <div className="dashboard__panel__content__pages">
       <div className="dashboard__panel__content__pages__left">
-        <div className="dashboard__panel__content__pages__heading">PAGES</div>
+        <div className="dashboard__panel__content__pages__heading">
+          Total Discount
+        </div>
         <div className="dashboard__panel__content__pages__left__content">
           <div className="dashboard__panel__content__pages__left__content__entry">
             <span>12</span>
-            Site Pages
+            Amount
           </div>
           <div className="dashboard__panel__content__pages__left__content__entry">
             <span>12</span>
-            Blog
+            Discount
           </div>
         </div>
       </div>
@@ -357,7 +359,7 @@ function Pages({}) {
     </div>
   );
 }
-function TotalEntries() {
+function TotalPurchases() {
   ChartJS.register(
     CategoryScale,
     LinearScale,
@@ -421,7 +423,7 @@ function TotalEntries() {
           marginBottom: "1em",
         }}
       >
-        Total Entries
+        Total Purchases
       </div>
       <Bar options={options} data={data} style={{ maxHeight: 300 }} />
     </div>
