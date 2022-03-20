@@ -161,7 +161,7 @@ body {
   padding: 0.8em 3em;
   margin: 3em 0em;
   border-radius: 5px;
-  background: linear-gradient(#ed263d, #77131f);
+  background: #9a7cb8;
   color: white;
   border: none;
   font-size: 15px;
@@ -189,7 +189,7 @@ body {
   color: #8f8f8f;
 }
 .auth__container__left__form__row__link a {
-  color: #ed263d;
+  color: #9a7cb8;
   font-weight: bold;
 }
 .auth__container__left__form__row__link:hover {
@@ -208,16 +208,21 @@ body {
   min-height: 100vh;
   background-color: #f9f9ff;
 }
-.container__sidebar {
-  background: linear-gradient(#ed263d, #77131f);
-  padding: 1em;
-  border-radius: 20px;
+.container__sidebar__wrapper {
   width: 100%;
   max-width: 300px;
   height: 91vh;
   position: sticky;
   top: 0px;
   margin-right: 2em;
+  border-radius: 20px;
+  background-color: #270c54;
+}
+.container__sidebar {
+  background: url("./assets/sidebarBg.png");
+  padding: 1em;
+  height: 100%;
+  width: 100%;
 }
 .container__sidebar__content {
   width: 100%;
@@ -267,11 +272,11 @@ body {
 }
 .nav__link__entry__input:hover ~ .nav__link__entry__content {
   transition: 300ms ease-in-out;
-  background-color: rgba(26, 26, 26, 0.25);
+  background-color: #9a7cb8;
 }
 .nav__link__entry__input:checked ~ .nav__link__entry__content {
   transition: 300ms ease-in-out;
-  background: linear-gradient(45deg, #1a1a1a, #373737);
+  background: #9a7cb8;
 }
 .nav__link__dropdown {
   display: flex;
@@ -307,12 +312,12 @@ body {
 .nav__link__dropdown__entry__input:hover
   ~ .nav__link__dropdown__entry__content {
   transition: 300ms ease-in-out;
-  background-color: rgba(26, 26, 26, 0.25);
+  background-color: #9a7cb8;
 }
 .nav__link__dropdown__entry__input:checked
   ~ .nav__link__dropdown__entry__content {
   transition: 300ms ease-in-out;
-  background: linear-gradient(45deg, #1a1a1a, #373737);
+  background: #9a7cb8;
 }
 .nav__link__sub__dropdown__entry {
   position: relative;
@@ -344,12 +349,12 @@ body {
 .nav__link__sub__dropdown__entry__input:hover
   ~ .nav__link__sub__dropdown__entry__content {
   transition: 300ms ease-in-out;
-  background-color: rgba(26, 26, 26, 0.25);
+  background-color: #9a7cb8;
 }
 .nav__link__sub__dropdown__entry__input:checked
   ~ .nav__link__sub__dropdown__entry__content {
   transition: 300ms ease-in-out;
-  background: linear-gradient(45deg, #1a1a1a, #373737);
+  background: #9a7cb8;
 }
 .container__sidebar__footer {
   height: 15%;
@@ -375,7 +380,7 @@ body {
   margin-right: 1em;
 }
 .container__sidebar__footer__entry:hover {
-  background-color: rgba(26, 26, 26, 0.25);
+  background-color: #9a7cb8;
 }
 //dashoard panel
 .dashboard__panel {
@@ -424,11 +429,11 @@ body {
 }
 .dashboard__panel__header__form:hover {
   transition: 300ms ease-in-out;
-  border-color: #ed263d;
+  border-color: #9a7cb8;
 }
 .dashboard__panel__header__form:focus-within {
   transition: 300ms ease-in-out;
-  border-color: #ed263d;
+  border-color: #9a7cb8;
 }
 .dashboard__panel__header__button {
   display: flex;
@@ -468,11 +473,11 @@ body {
   flex-direction: column;
 }
 .dashboard__panel__content__col:first-child {
-  width: 43%;
+  width: 23%;
   margin-right: 2%;
 }
 .dashboard__panel__content__col:nth-child(2) {
-  width: 23%;
+  width: 43%;
   margin-right: 2%;
 }
 .dashboard__panel__content__col:last-child {
@@ -605,7 +610,7 @@ body {
 }
 .dashboard__panel__content__stats__content__value {
   font-size: 20px;
-  color: #ed263d;
+  color: #9a7cb8;
   font-weight: bold;
 }
 .dashboard__panel__content__total_entries {
@@ -652,7 +657,7 @@ body {
 }
 .main__header__top__heading__button:hover {
   transition: 300ms ease-in-out;
-  color: #ed263d;
+  color: #9a7cb8;
 }
 .main__header__top__buttons {
   display: flex;
@@ -665,7 +670,7 @@ body {
   border-radius: 5px;
   border: none;
   color: white;
-  background: linear-gradient(45deg, #ed263d, #77131f);
+  background: #9a7cb8;
   cursor: pointer;
 }
 .main__header__top__buttons__button:hover {
@@ -717,13 +722,13 @@ body {
   cursor: pointer;
 }
 .main__header__bottom__input__button:hover {
-  color: #ed263d;
+  color: #9a7cb8;
 }
 .main__header__bottom__input:hover {
-  border-color: #ed263d;
+  border-color: #9a7cb8;
 }
 .main__header__bottom__input:focus-within {
-  border-color: #ed263d;
+  border-color: #9a7cb8;
 }
 .main__content {
   background-color: white;
@@ -742,7 +747,7 @@ body {
   background-color: transparent;
 }
 .main__content::-webkit-scrollbar-thumb {
-  background-color: #ed263d;
+  background-color: #9a7cb8;
   border-radius: 50px;
 }
 //main__content__table
@@ -786,7 +791,7 @@ body {
   cursor: pointer;
 }
 .main__content__table__header__entry__button:hover {
-  color: #ed263d;
+  color: #9a7cb8;
 }
 .main__content__table__list {
   display: flex;
@@ -850,7 +855,7 @@ body {
   background: linear-gradient(#1a1a1a, #373737);
 }
 .main__content__table__list__entry__button__secondary {
-  background: linear-gradient(#ed263d, #77131f);
+  background: #9a7cb8;
 }
 .main__content__table__list__entry__button:hover {
   transition: 300ms ease-in-out;
@@ -886,7 +891,7 @@ body {
   right: 20px;
   background-color: transparent;
   border: none;
-  color: #ed263d;
+  color: #9a7cb8;
   cursor: pointer;
 }
 .popup__form__close:hover {
@@ -937,10 +942,10 @@ body {
   background-color: white;
 }
 .popup__form__input__field:hover {
-  border-color: #ed263d;
+  border-color: #9a7cb8;
 }
 .popup__form__input__field:focus {
-  border-color: #ed263d;
+  border-color: #9a7cb8;
 }
 .popup__form__upload__wrapper {
   display: flex;
@@ -976,7 +981,7 @@ body {
   border-radius: 10px;
 }
 .popup__form__button {
-  background: linear-gradient(45deg, #ed263d, #77131f);
+  background: #9a7cb8;
   height: 35px;
   border-radius: 5px;
   padding: 0em;
@@ -1069,11 +1074,11 @@ body {
 }
 
 // .react-toggle--checked .react-toggle-track {
-//   background-color: #ed263d;
+//   background-color: #9A7CB8;
 // }
 
 // .react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
-//   background-color: #ed263d;
+//   background-color: #9A7CB8;
 // }
 
 .react-toggle-track-check {
@@ -1141,7 +1146,7 @@ body {
 
 .react-toggle--checked .react-toggle-thumb {
   left: 27px;
-  background: linear-gradient(#ed263d, #77131f);
+  background: #9a7cb8;
 }
 
 // .react-toggle--focus .react-toggle-thumb {

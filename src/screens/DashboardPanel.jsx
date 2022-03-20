@@ -46,10 +46,6 @@ export default function DashboardPanel() {
       <div className="dashboard__panel__content">
         <div className="dashboard__panel__content__row">
           <div className="dashboard__panel__content__col">
-            <Posts />
-            <Pages />
-          </div>
-          <div className="dashboard__panel__content__col">
             <div className="dashboard__panel__content__stats">
               <div className="dashboard__panel__content__stats__icon">
                 <svg
@@ -71,7 +67,7 @@ export default function DashboardPanel() {
                   120
                 </div>
                 <div className="dashboard__panel__content__stats__content__label">
-                  Total Entities
+                  Totle Receipt
                 </div>
               </div>
             </div>
@@ -88,7 +84,7 @@ export default function DashboardPanel() {
                     data-name="Icon material-data-usage"
                     d="M19.5,3.075V7.62A10.493,10.493,0,0,1,28.5,18a10.686,10.686,0,0,1-.72,3.81l3.9,2.3A14.814,14.814,0,0,0,33,18,15.009,15.009,0,0,0,19.5,3.075ZM18,28.5A10.493,10.493,0,0,1,16.5,7.62V3.075a15,15,0,1,0,13.575,23.79l-3.9-2.3A10.426,10.426,0,0,1,18,28.5Z"
                     transform="translate(-3 -3.075)"
-                    fill="#1a1a1a"
+                    fill="#1d1d1d"
                   />
                 </svg>
               </div>
@@ -97,7 +93,7 @@ export default function DashboardPanel() {
                   120
                 </div>
                 <div className="dashboard__panel__content__stats__content__label">
-                  Featured Entities
+                  Total Discount
                 </div>
               </div>
             </div>
@@ -152,7 +148,7 @@ export default function DashboardPanel() {
                   120
                 </div>
                 <div className="dashboard__panel__content__stats__content__label">
-                  Form Transforms
+                  Total Amount of Purchase
                 </div>
               </div>
             </div>
@@ -177,10 +173,14 @@ export default function DashboardPanel() {
                   120
                 </div>
                 <div className="dashboard__panel__content__stats__content__label">
-                  Total Data Entries
+                  Totle Customer
                 </div>
               </div>
             </div>
+          </div>
+          <div className="dashboard__panel__content__col">
+            <Posts />
+            <Pages />
           </div>
           <div className="dashboard__panel__content__col">
             <TrafficSource />
@@ -201,8 +201,8 @@ function TrafficSource({}) {
     datasets: [
       {
         data: [40, 40, 20],
-        backgroundColor: ["#1A1A1A", "#ED263D", "#D2D2D2"],
-        borderColor: ["#1A1A1A", "#ED263D", "#D2D2D2"],
+        backgroundColor: ["#37CE69", "#9A7CB8", "#D2D2D2"],
+        borderColor: ["#37CE69", "#9A7CB8", "#D2D2D2"],
         borderWidth: 0,
       },
     ],
@@ -222,7 +222,7 @@ function TrafficSource({}) {
         <div className="dashboard__panel__content__traffic__source__content__entry">
           <div
             className="dashboard__panel__content__traffic__source__content__entry__icon"
-            style={{ background: "#ed263d" }}
+            style={{ background: "#9A7CB8" }}
           ></div>
           <div className="dashboard__panel__content__traffic__source__content__entry__data">
             Search Engine
@@ -231,7 +231,7 @@ function TrafficSource({}) {
         <div className="dashboard__panel__content__traffic__source__content__entry">
           <div
             className="dashboard__panel__content__traffic__source__content__entry__icon"
-            style={{ background: "#1A1A1A" }}
+            style={{ background: "#37CE69" }}
           ></div>
           <div className="dashboard__panel__content__traffic__source__content__entry__data">
             Direct Click
@@ -297,14 +297,14 @@ function Posts({}) {
       {
         label: "Site Page",
         data: [40, 40, 20, 40, 40, 20, 40, 40, 20, 40, 40, 20],
-        borderColor: "#1A1A1A",
-        backgroundColor: "#1A1A1A",
+        borderColor: "#37CE69",
+        backgroundColor: "#37CE69",
       },
       {
         label: "Blog",
         data: [10, 30, 100, 10, 30, 100, 10, 30, 100, 10, 30, 100],
-        borderColor: "#ED263D",
-        backgroundColor: "#ED263D",
+        borderColor: "#9A7CB8",
+        backgroundColor: "#9A7CB8",
       },
     ],
   };
@@ -332,8 +332,8 @@ function Pages({}) {
     datasets: [
       {
         data: [50, 30],
-        backgroundColor: ["#1A1A1A", "#ED263D"],
-        borderColor: ["#1A1A1A", "#ED263D"],
+        backgroundColor: ["#37CE69", "#9A7CB8"],
+        borderColor: ["#37CE69", "#9A7CB8"],
         borderWidth: 0,
       },
     ],
@@ -409,7 +409,7 @@ function TotalEntries() {
       {
         label: "Dataset 1",
         data: [10, 30, 20, 10, 30, 40, 10, 100, 50, 60, 70, 80, 70, 80],
-        backgroundColor: "#ED263D",
+        backgroundColor: "#9A7CB8",
       },
     ],
   };
