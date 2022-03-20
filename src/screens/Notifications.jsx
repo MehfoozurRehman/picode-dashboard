@@ -1,8 +1,5 @@
 import React from "react";
-import { Search } from "react-feather";
-import { Link } from "react-router-dom";
 import TableHeaderEntry from "../components/TableHeaderEntry";
-import { Edit, Trash } from "react-feather";
 
 function NotificationsTableEntry({ onEdit, onDelete }) {
   return (
