@@ -623,11 +623,14 @@ body {
 .main {
   flex: 1;
   height: 91vh;
+  background-color: white;
+  border-radius: 20px;
 }
 .main__header {
   display: flex;
   flex-direction: column;
-  height: 15%;
+  height: 7%;
+  padding: 1em 2em;
 }
 .main__header__top {
   display: flex;
@@ -636,10 +639,23 @@ body {
   margin-bottom: 1em;
 }
 .main__header__top__heading {
-  font-size: 25px;
+  font-size: 22px;
   color: #242424;
   font-weight: bold;
   display: flex;
+  position: relative;
+}
+.main__header__top__heading::after {
+  content: "";
+  width: 50px;
+  height: 3px;
+  left: 45px;
+  top: 30px;
+  position: absolute;
+  background-color: #9a7cb8;
+}
+.main__header__top__heading svg {
+  margin-right: 0.5em;
 }
 .main__header__top__heading__button {
   background-color: transparent;
@@ -736,7 +752,7 @@ body {
   padding: 1em;
   padding-top: 0em;
   max-width: calc(100vw - 400px);
-  height: 85%;
+  height: 93%;
   overflow: auto;
 }
 .main__content::-webkit-scrollbar {

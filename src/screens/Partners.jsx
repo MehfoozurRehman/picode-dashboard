@@ -18,19 +18,6 @@ export default function Partners({ onAdd, onEdit, onDelete }) {
             </button>
           </div>
         </div>
-        <div className="main__header__bottom">
-          <div></div>
-          <form className="main__header__bottom__input">
-            <input
-              type="text"
-              className="main__header__bottom__input__field"
-              placeholder="Search here"
-            />
-            <button className="main__header__bottom__input__button">
-              <Search size={18} color="currentColor" />
-            </button>
-          </form>
-        </div>
       </div>
       <div className="main__content">
         <div className="main__content__table">
