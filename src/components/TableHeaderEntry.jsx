@@ -5,7 +5,7 @@ export default function TableHeaderEntry({ title, style }) {
   return (
     <div className="main__content__table__header__entry" style={style}>
       {title}
-      {title === "Action" ? null : (
+      {title === "" ? null : (
         <button
           className="main__content__table__header__entry__button"
           onClick={() => {
