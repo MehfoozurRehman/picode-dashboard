@@ -10,6 +10,7 @@ import Sidebar from "./components/Sidebar";
 import DashboardPanel from "./screens/DashboardPanel";
 
 import DeleteConfirmation from "./components/DeleteConfirmation";
+import AllocateRewards from "./screens/AllocateRewards";
 
 function Dashboard() {
   return (
@@ -41,7 +42,7 @@ export default function App() {
           <Route path="" element={<DashboardPanel />} />
           <Route
             path="allocate_rewards"
-            element={<DashboardPanel onDelete={setIsDeleteConfirmation} />}
+            element={<AllocateRewards onDelete={setIsDeleteConfirmation} />}
           />
           <Route
             path="invoice_bills"
