@@ -11,6 +11,13 @@ import DashboardPanel from "./screens/DashboardPanel";
 
 import DeleteConfirmation from "./components/DeleteConfirmation";
 import AllocateRewards from "./screens/AllocateRewards";
+import InvoiceBills from "./screens/InvoiceBills";
+import Settings from "./screens/Settings";
+import PricingDiscounting from "./screens/Settings";
+import AdsManagement from "./screens/AdsManagement";
+import PaymentHistory from "./screens/PaymentHistory";
+import Notifications from "./screens/Notifications";
+import CallUs from "./screens/CallUs";
 
 function Dashboard() {
   return (
@@ -46,31 +53,31 @@ export default function App() {
           />
           <Route
             path="invoice_bills"
-            element={<DashboardPanel onDelete={setIsDeleteConfirmation} />}
+            element={<InvoiceBills onDelete={setIsDeleteConfirmation} />}
           />
           <Route
             path="settings"
-            element={<DashboardPanel onDelete={setIsDeleteConfirmation} />}
+            element={<Settings onDelete={setIsDeleteConfirmation} />}
           />
           <Route
             path="pricing_discounting"
-            element={<DashboardPanel onDelete={setIsDeleteConfirmation} />}
+            element={<PricingDiscounting onDelete={setIsDeleteConfirmation} />}
           />
           <Route
             path="ad_management"
-            element={<DashboardPanel onDelete={setIsDeleteConfirmation} />}
+            element={<AdsManagement onDelete={setIsDeleteConfirmation} />}
           />
           <Route
             path="payment_history"
-            element={<DashboardPanel onDelete={setIsDeleteConfirmation} />}
+            element={<PaymentHistory onDelete={setIsDeleteConfirmation} />}
           />
           <Route
             path="notifications"
-            element={<DashboardPanel onDelete={setIsDeleteConfirmation} />}
+            element={<Notifications onDelete={setIsDeleteConfirmation} />}
           />
           <Route
             path="call_us"
-            element={<DashboardPanel onDelete={setIsDeleteConfirmation} />}
+            element={<CallUs onDelete={setIsDeleteConfirmation} />}
           />
         </Route>
       </Routes>

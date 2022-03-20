@@ -413,8 +413,6 @@ export default function Sidebar({}) {
                 d="M6.494,0V2.165h8.659V12.989H6.494v2.165H17.318V0ZM4.33,4.33,0,7.577l4.33,3.247V8.659h8.659V6.494H4.33Z"
                 transform="translate(0.833 0.5)"
                 fill="#fff"
-                stroke="#81313b"
-                strokeWidth="1"
               />
             </svg>
             Logout

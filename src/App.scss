@@ -1258,6 +1258,45 @@ body {
   box-shadow: none !important;
   background-color: #f9f9ff !important;
 }
+.main__content__row__contact {
+  display: flex;
+  margin-top: 2em;
+}
+.main__content__row__contact__link {
+  color: white;
+  background-color: #1db900;
+  display: flex;
+  align-items: center;
+  margin-right: 1em;
+  padding: 0.7em 1.5em;
+  border-radius: 10px;
+  font-size: 14px;
+  text-decoration: none;
+}
+.main__content__row__contact__link:hover {
+  transition: 300ms ease-in-out;
+  background-color: #24d305;
+}
+.main__content__row__contact__link svg {
+  width: 18px;
+  height: 18px;
+  margin-right: 1em;
+}
+.main__content__row__contact__link:first-child {
+  background-color: #f8f2f8;
+  color: #000000;
+}
+.main__content__row__contact__link:first-child:hover {
+  transition: 300ms ease-in-out;
+  background-color: #f8f0f8;
+}
+.main__content__row__contact__link:last-child {
+  background-color: #9a7cb8;
+}
+.main__content__row__contact__link:last-child:hover {
+  transition: 300ms ease-in-out;
+  background-color: #b896db;
+}
 @media (max-width: 1440px) {
   .dashboard__panel__content__stats__icon {
     padding: 0.7em 1em;
