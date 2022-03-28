@@ -1,8 +1,4 @@
 import React from "react";
-import { Search } from "react-feather";
-import { Link } from "react-router-dom";
-import CategoryTableEntry from "../components/CategoryTableEntry";
-import TableHeaderEntry from "../components/TableHeaderEntry";
 import Toggle from "react-toggle";
 
 export default function AllocateRewards({ onAdd, onEdit, onDelete }) {
