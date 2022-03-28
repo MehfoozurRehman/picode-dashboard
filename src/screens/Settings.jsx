@@ -142,9 +142,6 @@ export default function PricingDiscounting({ onAdd, onEdit, onDelete }) {
             Settings
           </div>
           <div className="main__header__top__buttons">
-            {/* <button className="main__header__top__buttons__button">
-              Bulk Add
-            </button> */}
             <button
               className="main__header__top__buttons__button"
               onClick={() => {

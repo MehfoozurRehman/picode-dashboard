@@ -1120,14 +1120,15 @@ body {
   height: 28px;
   padding: 0em 1em;
   border-radius: 30px;
-  background-color: #d6d6d6;
+  background-color: white;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   transition: all 0.2s ease;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
 }
 
 .react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
-  background-color: #c7c7c7;
+  background-color: white;
 }
 
 // .react-toggle--checked .react-toggle-track {
@@ -1190,7 +1191,7 @@ body {
   height: 22px;
 
   border-radius: 50%;
-  background: linear-gradient(#1a1a1a, #373737);
+  background: #d6d6d6;
 
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1417,6 +1418,44 @@ body {
   margin-bottom: 1em;
   color: white;
   font-size: 12px;
+}
+.main__content__allocate {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 1em;
+}
+.main__content__allocate__row {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  align-items: center;
+  margin-bottom: 1em;
+  padding: 0.5em 1em;
+  font-weight: 500;
+}
+.main__content__allocate__row .main__content__table__list__entry__button {
+  margin-right: 0em;
+}
+.main__content__allocate__row__left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-right: 1em;
+  max-width: 350px;
+}
+.main__content__allocate__row__left__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+  font-size: 14px;
+}
+.main__content__allocate__row__value span {
+  color: #9a7cb8;
 }
 @media (max-width: 1440px) {
   .dashboard__panel__content__stats__icon {

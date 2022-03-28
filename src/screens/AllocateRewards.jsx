@@ -122,25 +122,37 @@ export default function AllocateRewards({ onAdd, onEdit, onDelete }) {
               </svg>
             </button>
           </div>
+          <div
+            className="main__content__allocate__row"
+            style={{ backgroundColor: "transparent", padding: 0 }}
+          >
+            Offer
+          </div>
           <div className="main__content__allocate__row">
             <div className="main__content__allocate__row__left">
               <div className="main__content__allocate__row__left__row">
                 <div className="main__content__allocate__row__heading">
-                  Target Points
+                  Points Earned
                 </div>
-                <div className="main__content__allocate__row__value">50</div>
+                <div className="main__content__allocate__row__value">
+                  <span>34%</span>
+                </div>
               </div>
               <div className="main__content__allocate__row__left__row">
                 <div className="main__content__allocate__row__heading">
-                  Target Points
+                  Start Date
                 </div>
-                <div className="main__content__allocate__row__value">50</div>
+                <div className="main__content__allocate__row__value">
+                  5/4/2022
+                </div>
               </div>
               <div className="main__content__allocate__row__left__row">
                 <div className="main__content__allocate__row__heading">
-                  Target Points
+                  End Date
                 </div>
-                <div className="main__content__allocate__row__value">50</div>
+                <div className="main__content__allocate__row__value">
+                  5/4/2022
+                </div>
               </div>
             </div>
             <Toggle defaultChecked={false} icons={false} />
@@ -227,6 +239,12 @@ export default function AllocateRewards({ onAdd, onEdit, onDelete }) {
               </svg>
             </button>
           </div>
+          <button
+            className="main__header__top__buttons__button"
+            style={{ margin: "0em auto" }}
+          >
+            Add New
+          </button>
         </div>
       </div>
     </div>
