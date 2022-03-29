@@ -109,7 +109,7 @@ body {
 }
 .checkbox__content__label {
   font-size: 14px;
-  font-weight: bold;
+  
 }
 .checkbox__input:hover ~ .checkbox__content .checkbox__content__indicator {
   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
@@ -117,7 +117,7 @@ body {
 .auth__container__left__form__input {
   display: flex;
   position: relative;
-  margin-bottom: 2em;
+  margin-bottom: 1.2em;
   align-items: center;
   width: 100%;
   border-bottom: 1px solid #ffffff;
@@ -1492,7 +1492,7 @@ body {
 .authentication__container__overlay__form__header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 2em;
+  margin-bottom: .5em;
 }
 .authentication__container__overlay__form__header__heading {
   color: white;
@@ -1511,6 +1511,55 @@ body {
 }
 .authentication__container__overlay__form__header__img {
   width: 80px;
+}
+.authentication__container__overlay__form__content{
+display: flex;
+flex-direction: column; 
+align-items: flex-end; 
+}
+.authentication__container__overlay__form__forgotpass{
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  
+}
+.authentication__container__overlay__form__btn{
+  padding: 1em;
+  width: 100%;
+  background-color: #9A7CB8;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  margin: 2em 0;
+}
+.authentication__container__overlay__form__toSignup{
+  width: 100%;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  margin: 1em 0;
+}
+.authentication__container__overlay__form__toSignup a{
+ color: #9A7CB8;
+}
+.authentication__container__overlay__form__content__row{
+  display: flex;
+  width: 100%;
+
+}
+.authentication__container__overlay__form__checkbox{
+  margin: 1em 0;
+  text-align: left;
+  width: 100%;
+}
+.authentication__container__overlay__form__checkbox__anchor{
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
 }
 @media (max-width: 1440px) {
   .dashboard__panel__content__stats__icon {

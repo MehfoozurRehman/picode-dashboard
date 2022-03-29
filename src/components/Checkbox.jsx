@@ -9,6 +9,7 @@ const CheckBox = ({
   label,
   labelColor,
   style,
+  customLabel,
 }) => {
   return (
     <div className="checkbox">
@@ -44,9 +45,16 @@ const CheckBox = ({
             </svg>
           ) : null}
         </div>
-        <div className="checkbox__content__label" style={{ color: labelColor }}>
-          {label}
-        </div>
+        {customLabel ? (
+          customLabel
+        ) : (
+          <div
+            className="checkbox__content__label"
+            style={{ color: labelColor }}
+          >
+            {label}
+          </div>
+        )}
       </div>
     </div>
   );

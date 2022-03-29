@@ -25,6 +25,16 @@ export default function Login() {
           <div className="authentication__container__overlay__form__content">
             <InputBox placeholder="Email" error="" autoFocus />
             <InputBox placeholder="Password" type="password" error="" />
+            <a href="#" className="authentication__container__overlay__form__forgotpass">
+            Forgot Password?
+          </a>
+          <a href="#" className="authentication__container__overlay__form__btn">
+            Login
+          </a>
+          <div className="authentication__container__overlay__form__toSignup">
+          Don't have an account? <a href="#"> Sign Up</a>
+          </div>
+
           </div>
         </div>
       </div>

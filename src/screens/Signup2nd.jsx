@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import InputBox from "../components/InputBox";
 import CheckBox from "../components/Checkbox";
 
-export default function Signup() {
+export default function Signup2nd() {
   const navigate = useNavigate();
   const [isChecked, setIschecked] = useState(false);
   return (
@@ -15,7 +15,7 @@ export default function Signup() {
         <form action="" className="authentication__container__overlay__form">
           <div className="authentication__container__overlay__form__header">
             <div className="authentication__container__overlay__form__header__heading">
-              Sign Up
+              Sign Up 2nd
             </div>
             <img
               src={logo}
@@ -24,23 +24,27 @@ export default function Signup() {
             />
           </div>
           <div className="authentication__container__overlay__form__content">
-            <div className="authentication__container__overlay__form__content__row">
-              <InputBox placeholder="Brand Name English" error="" autoFocus />
-              <div style={{ width: "30px" }}>&nbsp;</div>
-              <InputBox placeholder="Brand Name Arabic" error="" />
-            </div>
-            <InputBox placeholder="Email" type="email" error="" />
-            <InputBox placeholder="Phone" type="tel" error="" />
-            <div className="authentication__container__overlay__form__content__row">
-              <InputBox placeholder="Password" type="password" error="" />
-              <div style={{ width: "30px" }}>&nbsp;</div>
-              <InputBox
-                placeholder="Re-Enter Password"
-                type="password"
-                error=""
-              />
-            </div>
-
+            <InputBox
+              placeholder="Type of merchant"
+              type="text"
+              error=""
+              autoFocus
+            />
+            <InputBox placeholder="Number of Branches" type="text" error="" />
+            <InputBox
+              placeholder="Cities"
+              error=""
+              name="cities"
+              id="city"
+              list="cities"
+            />
+            <datalist id="cities">
+              <option value="Edge" />
+              <option value="Firefox" />
+              <option value="Chrome" />
+              <option value="Opera" />
+              <option value="Safari" />
+            </datalist>
             <div className="authentication__container__overlay__form__checkbox">
               <CheckBox
                 value={isChecked}
@@ -49,7 +53,13 @@ export default function Signup() {
                     className="checkbox__content__label"
                     style={{ color: "white" }}
                   >
-                    I Agree to the <a href="#" className="authentication__container__overlay__form__checkbox__anchor">Partnership Agreement</a>
+                    I Agree to the{" "}
+                    <a
+                      href="#"
+                      className="authentication__container__overlay__form__checkbox__anchor"
+                    >
+                      Partnership Agreement
+                    </a>
                   </div>
                 }
                 labelColor="#ffffff"
@@ -62,7 +72,7 @@ export default function Signup() {
                 }}
               />
             </div>
-         
+
             <a
               href="#"
               className="authentication__container__overlay__form__btn"

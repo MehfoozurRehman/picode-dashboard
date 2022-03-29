@@ -1,6 +1,15 @@
 import React, { useState } from "react";
 
-export default function InputBox({ svg, placeholder, type, error, autoFocus }) {
+export default function InputBox({
+  svg,
+  placeholder,
+  type,
+  error,
+  autoFocus,
+  id,
+  name,
+  list,
+}) {
   const [focus, setFocus] = useState(false);
   console.log(focus);
   return (
@@ -28,6 +37,9 @@ export default function InputBox({ svg, placeholder, type, error, autoFocus }) {
         onBlur={() => {
           setFocus(false);
         }}
+        id={id ? id : placeholder}
+        list={list}
+        name={name ? name : placeholder}
         autoFocus={autoFocus}
         placeholder={placeholder}
         className="auth__container__left__form__input__field"

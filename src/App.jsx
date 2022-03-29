@@ -21,6 +21,7 @@ import CallUs from "./screens/CallUs";
 import NotificationForm from "./screens/NotificationForm";
 import AllocateRewardPopup from "./components/AllocateRewardPopup";
 import RecieptPopup from "./components/RecieptPopup";
+import Signup2nd from "./screens/Signup2nd";
 
 function Dashboard() {
   return (
@@ -77,6 +78,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/sign_up" element={<Signup />} />
+        <Route path="/sign_up_next" element={<Signup2nd />} />
         <Route path="/change_password" element={<ChangePassword />} />
         <Route path="/forgot_password" element={<ForgotPassword />} />
         <Route path="/dashboard" element={<Dashboard />}>
