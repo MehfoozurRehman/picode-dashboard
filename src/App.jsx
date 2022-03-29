@@ -20,6 +20,7 @@ import Notifications from "./screens/Notifications";
 import CallUs from "./screens/CallUs";
 import NotificationForm from "./screens/NotificationForm";
 import AllocateRewardPopup from "./components/AllocateRewardPopup";
+import RecieptPopup from "./components/RecieptPopup";
 
 function Dashboard() {
   return (
@@ -36,6 +37,8 @@ export default function App() {
     useState(false);
   const [isEditAllocateRewardPopup, setIsEditAllocateRewardPopup] =
     useState(false);
+  const [isAddRecieptPopup, setIsAddRecieptPopup] = useState(false);
+  const [isEditRecieptPopup, setIsEditRecieptPopup] = useState(false);
 
   return (
     <>
@@ -58,7 +61,19 @@ export default function App() {
           onSubmit={setIsEditAllocateRewardPopup}
         />
       ) : null}
-
+      {isAddRecieptPopup ? (
+        <RecieptPopup
+          onClose={setIsAddRecieptPopup}
+          onSubmit={setIsAddRecieptPopup}
+        />
+      ) : null}
+      {isEditRecieptPopup ? (
+        <RecieptPopup
+          isEdit
+          onClose={setIsEditRecieptPopup}
+          onSubmit={setIsEditRecieptPopup}
+        />
+      ) : null}
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/sign_up" element={<Signup />} />
@@ -82,7 +97,13 @@ export default function App() {
           />
           <Route
             path="settings"
-            element={<Settings onDelete={setIsDeleteConfirmation} />}
+            element={
+              <Settings
+                onDelete={setIsDeleteConfirmation}
+                onAdd={setIsAddRecieptPopup}
+                onEdit={setIsEditRecieptPopup}
+              />
+            }
           />
           <Route
             path="pricing_discounting"

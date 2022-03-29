@@ -152,9 +152,7 @@ export default function PricingDiscounting({ onAdd, onEdit, onDelete }) {
             </button>
             <button
               className="main__header__top__buttons__button"
-              onClick={() => {
-                onAdd(true);
-              }}
+              onClick={() => {}}
               style={{ background: "#242424" }}
             >
               Edit Profile
