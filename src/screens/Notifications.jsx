@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import TableHeaderEntry from "../components/TableHeaderEntry";
 
 function NotificationsTableEntry({ onEdit, onDelete }) {
@@ -103,6 +104,7 @@ function NotificationsTableEntry({ onEdit, onDelete }) {
 }
 
 export default function Notifications({ onAdd, onEdit, onDelete }) {
+  const navigate = useNavigate();
   return (
     <div className="main">
       <div className="main__header">
@@ -152,7 +154,7 @@ export default function Notifications({ onAdd, onEdit, onDelete }) {
             <button
               className="main__header__top__buttons__button"
               onClick={() => {
-                onAdd(true);
+                navigate("/dashboard/notifications/add");
               }}
             >
               Add New
@@ -168,43 +170,228 @@ export default function Notifications({ onAdd, onEdit, onDelete }) {
             <TableHeaderEntry title="Description" />
             <TableHeaderEntry title="Date" />
           </div>
-          <NotificationsTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <NotificationsTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <NotificationsTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <NotificationsTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <NotificationsTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <NotificationsTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <NotificationsTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <NotificationsTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <NotificationsTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <NotificationsTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <NotificationsTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <NotificationsTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <NotificationsTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <NotificationsTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <NotificationsTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <NotificationsTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <NotificationsTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <NotificationsTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <NotificationsTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <NotificationsTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <NotificationsTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <NotificationsTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <NotificationsTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <NotificationsTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <NotificationsTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <NotificationsTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <NotificationsTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <NotificationsTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <NotificationsTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <NotificationsTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <NotificationsTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <NotificationsTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <NotificationsTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <NotificationsTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <NotificationsTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <NotificationsTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <NotificationsTableEntry onEdit={onEdit} onDelete={onDelete} />
+          <NotificationsTableEntry
+            onEdit={() => {
+              navigate("/dashboard/notifications/edit");
+            }}
+            onDelete={onDelete}
+          />
+          <NotificationsTableEntry
+            onEdit={() => {
+              navigate("/dashboard/notifications/edit");
+            }}
+            onDelete={onDelete}
+          />
+          <NotificationsTableEntry
+            onEdit={() => {
+              navigate("/dashboard/notifications/edit");
+            }}
+            onDelete={onDelete}
+          />
+          <NotificationsTableEntry
+            onEdit={() => {
+              navigate("/dashboard/notifications/edit");
+            }}
+            onDelete={onDelete}
+          />
+          <NotificationsTableEntry
+            onEdit={() => {
+              navigate("/dashboard/notifications/edit");
+            }}
+            onDelete={onDelete}
+          />
+          <NotificationsTableEntry
+            onEdit={() => {
+              navigate("/dashboard/notifications/edit");
+            }}
+            onDelete={onDelete}
+          />
+          <NotificationsTableEntry
+            onEdit={() => {
+              navigate("/dashboard/notifications/edit");
+            }}
+            onDelete={onDelete}
+          />
+          <NotificationsTableEntry
+            onEdit={() => {
+              navigate("/dashboard/notifications/edit");
+            }}
+            onDelete={onDelete}
+          />
+          <NotificationsTableEntry
+            onEdit={() => {
+              navigate("/dashboard/notifications/edit");
+            }}
+            onDelete={onDelete}
+          />
+          <NotificationsTableEntry
+            onEdit={() => {
+              navigate("/dashboard/notifications/edit");
+            }}
+            onDelete={onDelete}
+          />
+          <NotificationsTableEntry
+            onEdit={() => {
+              navigate("/dashboard/notifications/edit");
+            }}
+            onDelete={onDelete}
+          />
+          <NotificationsTableEntry
+            onEdit={() => {
+              navigate("/dashboard/notifications/edit");
+            }}
+            onDelete={onDelete}
+          />
+          <NotificationsTableEntry
+            onEdit={() => {
+              navigate("/dashboard/notifications/edit");
+            }}
+            onDelete={onDelete}
+          />
+          <NotificationsTableEntry
+            onEdit={() => {
+              navigate("/dashboard/notifications/edit");
+            }}
+            onDelete={onDelete}
+          />
+          <NotificationsTableEntry
+            onEdit={() => {
+              navigate("/dashboard/notifications/edit");
+            }}
+            onDelete={onDelete}
+          />
+          <NotificationsTableEntry
+            onEdit={() => {
+              navigate("/dashboard/notifications/edit");
+            }}
+            onDelete={onDelete}
+          />
+          <NotificationsTableEntry
+            onEdit={() => {
+              navigate("/dashboard/notifications/edit");
+            }}
+            onDelete={onDelete}
+          />
+          <NotificationsTableEntry
+            onEdit={() => {
+              navigate("/dashboard/notifications/edit");
+            }}
+            onDelete={onDelete}
+          />
+          <NotificationsTableEntry
+            onEdit={() => {
+              navigate("/dashboard/notifications/edit");
+            }}
+            onDelete={onDelete}
+          />
+          <NotificationsTableEntry
+            onEdit={() => {
+              navigate("/dashboard/notifications/edit");
+            }}
+            onDelete={onDelete}
+          />
+          <NotificationsTableEntry
+            onEdit={() => {
+              navigate("/dashboard/notifications/edit");
+            }}
+            onDelete={onDelete}
+          />
+          <NotificationsTableEntry
+            onEdit={() => {
+              navigate("/dashboard/notifications/edit");
+            }}
+            onDelete={onDelete}
+          />
+          <NotificationsTableEntry
+            onEdit={() => {
+              navigate("/dashboard/notifications/edit");
+            }}
+            onDelete={onDelete}
+          />
+          <NotificationsTableEntry
+            onEdit={() => {
+              navigate("/dashboard/notifications/edit");
+            }}
+            onDelete={onDelete}
+          />
+          <NotificationsTableEntry
+            onEdit={() => {
+              navigate("/dashboard/notifications/edit");
+            }}
+            onDelete={onDelete}
+          />
+          <NotificationsTableEntry
+            onEdit={() => {
+              navigate("/dashboard/notifications/edit");
+            }}
+            onDelete={onDelete}
+          />
+          <NotificationsTableEntry
+            onEdit={() => {
+              navigate("/dashboard/notifications/edit");
+            }}
+            onDelete={onDelete}
+          />
+          <NotificationsTableEntry
+            onEdit={() => {
+              navigate("/dashboard/notifications/edit");
+            }}
+            onDelete={onDelete}
+          />
+          <NotificationsTableEntry
+            onEdit={() => {
+              navigate("/dashboard/notifications/edit");
+            }}
+            onDelete={onDelete}
+          />
+          <NotificationsTableEntry
+            onEdit={() => {
+              navigate("/dashboard/notifications/edit");
+            }}
+            onDelete={onDelete}
+          />
+          <NotificationsTableEntry
+            onEdit={() => {
+              navigate("/dashboard/notifications/edit");
+            }}
+            onDelete={onDelete}
+          />
+          <NotificationsTableEntry
+            onEdit={() => {
+              navigate("/dashboard/notifications/edit");
+            }}
+            onDelete={onDelete}
+          />
+          <NotificationsTableEntry
+            onEdit={() => {
+              navigate("/dashboard/notifications/edit");
+            }}
+            onDelete={onDelete}
+          />
+          <NotificationsTableEntry
+            onEdit={() => {
+              navigate("/dashboard/notifications/edit");
+            }}
+            onDelete={onDelete}
+          />
+          <NotificationsTableEntry
+            onEdit={() => {
+              navigate("/dashboard/notifications/edit");
+            }}
+            onDelete={onDelete}
+          />
+          <NotificationsTableEntry
+            onEdit={() => {
+              navigate("/dashboard/notifications/edit");
+            }}
+            onDelete={onDelete}
+          />
+          <NotificationsTableEntry
+            onEdit={() => {
+              navigate("/dashboard/notifications/edit");
+            }}
+            onDelete={onDelete}
+          />
         </div>
       </div>
     </div>

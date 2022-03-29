@@ -5,7 +5,7 @@ import UploadImage from "../components/UploadImage";
 import TextArea from "../components/TextArea";
 import { useNavigate } from "react-router-dom";
 
-export default function TestimonialsForm({ heading }) {
+export default function NotificationForm({ heading }) {
   const navigate = useNavigate();
   return (
     <div className="main">
@@ -15,18 +15,18 @@ export default function TestimonialsForm({ heading }) {
             <button
               className="main__header__top__heading__button"
               onClick={() => {
-                navigate("/dashboard/testimonials");
+                navigate(-1);
               }}
             >
               <ArrowLeft size={20} color="currentColor" />
             </button>
-            {heading} Testimonials
+            {heading} Notification
           </div>
           <div className="main__header__top__buttons">
             <button
               className="main__header__top__buttons__button"
               onClick={() => {
-                navigate("/dashboard/testimonials");
+                navigate(-1);
               }}
             >
               {heading === "Add" ? "Add New" : "Save"}
@@ -43,7 +43,7 @@ export default function TestimonialsForm({ heading }) {
         <div className="main__content__form">
           <div className="main__content__form__col">
             <div className="popup__form__input">
-              <div className="popup__form__input__label">Name</div>
+              <div className="popup__form__input__label">Title</div>
               <input
                 type="text"
                 className="popup__form__input__field"
@@ -54,45 +54,19 @@ export default function TestimonialsForm({ heading }) {
           </div>
           <div className="main__content__form__col">
             <div className="popup__form__input">
-              <div className="popup__form__input__label">Name</div>
+              <div className="popup__form__input__label">Date</div>
               <input
-                type="text"
+                type="date"
                 className="popup__form__input__field"
                 placeholder="Enter Name"
               />
               <div className="popup__form__input__error"></div>
             </div>
           </div>
-          <div className="main__content__form__col">
+          <div className="main__content__form__col"></div>
+          <div className="main__content__form__col" style={{ width: "65.5%" }}>
             <div className="popup__form__input">
-              <div className="popup__form__input__label">Category</div>
-              <Select
-                options={[
-                  { value: "chocolate", label: "Chocolate" },
-                  { value: "strawberry", label: "Strawberry" },
-                  { value: "vanilla", label: "Vanilla" },
-                ]}
-                theme={(theme) => ({
-                  ...theme,
-
-                  colors: {
-                    ...theme.colors,
-                    primary25: "#f6f6f6",
-                    primary: "#9a7cb8",
-                    primary50: "f6f6f6",
-                  },
-                })}
-                isMulti
-              />
-              <div className="popup__form__input__error"></div>
-            </div>
-          </div>
-          <div className="main__content__form__col" style={{ width: "15%" }}>
-            <UploadImage label="Image" />
-          </div>
-          <div className="main__content__form__col" style={{ width: "85%" }}>
-            <div className="popup__form__input">
-              <div className="popup__form__input__label">Message</div>
+              <div className="popup__form__input__label">Description</div>
               <TextArea />
               <div className="popup__form__input__error"></div>
             </div>

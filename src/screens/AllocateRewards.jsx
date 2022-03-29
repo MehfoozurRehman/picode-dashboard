@@ -238,6 +238,7 @@ export default function AllocateRewards({ onAdd, onEdit, onDelete }) {
           <button
             className="main__header__top__buttons__button"
             style={{ margin: "0em auto" }}
+            onClick={onAdd}
           >
             Add New
           </button>

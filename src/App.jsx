@@ -13,11 +13,13 @@ import DeleteConfirmation from "./components/DeleteConfirmation";
 import AllocateRewards from "./screens/AllocateRewards";
 import InvoiceBills from "./screens/InvoiceBills";
 import Settings from "./screens/Settings";
-import PricingDiscounting from "./screens/Settings";
+import PricingDiscounting from "./screens/PricingDiscounting";
 import AdsManagement from "./screens/AdsManagement";
 import PaymentHistory from "./screens/PaymentHistory";
 import Notifications from "./screens/Notifications";
 import CallUs from "./screens/CallUs";
+import NotificationForm from "./screens/NotificationForm";
+import AllocateRewardPopup from "./components/AllocateRewardPopup";
 
 function Dashboard() {
   return (
@@ -30,6 +32,10 @@ function Dashboard() {
 
 export default function App() {
   const [isDeleteConfirmation, setIsDeleteConfirmation] = useState(false);
+  const [isAddAllocateRewardPopup, setIsAddAllocateRewardPopup] =
+    useState(false);
+  const [isEditAllocateRewardPopup, setIsEditAllocateRewardPopup] =
+    useState(false);
 
   return (
     <>
@@ -37,6 +43,19 @@ export default function App() {
         <DeleteConfirmation
           onClose={setIsDeleteConfirmation}
           onSubmit={setIsDeleteConfirmation}
+        />
+      ) : null}
+      {isAddAllocateRewardPopup ? (
+        <AllocateRewardPopup
+          onClose={setIsAddAllocateRewardPopup}
+          onSubmit={setIsAddAllocateRewardPopup}
+        />
+      ) : null}
+      {isEditAllocateRewardPopup ? (
+        <AllocateRewardPopup
+          isEdit
+          onClose={setIsEditAllocateRewardPopup}
+          onSubmit={setIsEditAllocateRewardPopup}
         />
       ) : null}
 
@@ -49,7 +68,13 @@ export default function App() {
           <Route path="" element={<DashboardPanel />} />
           <Route
             path="allocate_rewards"
-            element={<AllocateRewards onDelete={setIsDeleteConfirmation} />}
+            element={
+              <AllocateRewards
+                onDelete={setIsDeleteConfirmation}
+                onAdd={setIsAddAllocateRewardPopup}
+                onEdit={setIsEditAllocateRewardPopup}
+              />
+            }
           />
           <Route
             path="invoice_bills"
@@ -74,6 +99,14 @@ export default function App() {
           <Route
             path="notifications"
             element={<Notifications onDelete={setIsDeleteConfirmation} />}
+          />
+          <Route
+            path="notifications/add"
+            element={<NotificationForm heading="Add" />}
+          />
+          <Route
+            path="notifications/edit"
+            element={<NotificationForm heading="Edit" />}
           />
           <Route
             path="call_us"

@@ -65,7 +65,7 @@ export default function PricingDiscounting({ onAdd, onEdit, onDelete }) {
       <div className="main__content">
         <div className="main__content__table">
           <div className="main__content__table__header">
-            <TableHeaderEntry title="Action" />
+            <TableHeaderEntry title="" />
             <TableHeaderEntry title="Active Image" />
             <TableHeaderEntry title="Inactive Image" />
             <TableHeaderEntry title="Name" />
