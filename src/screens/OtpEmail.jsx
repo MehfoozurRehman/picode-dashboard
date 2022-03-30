@@ -4,8 +4,7 @@ import authBg from "../assets/authBg.png";
 import { useNavigate } from "react-router-dom";
 import InputBox from "../components/InputBox";
 
-
-export default function Signup2nd() {
+export default function OtpEmail() {
   const navigate = useNavigate();
   const [isChecked, setIschecked] = useState(false);
   return (
@@ -15,7 +14,7 @@ export default function Signup2nd() {
         <form action="" className="authentication__container__overlay__form">
           <div className="authentication__container__overlay__form__header">
             <div className="authentication__container__overlay__form__header__heading">
-              Reset Password
+              OTP Email
             </div>
             <img
               src={logo}
@@ -24,17 +23,25 @@ export default function Signup2nd() {
             />
           </div>
           <div className="authentication__container__overlay__form__content">
+            <div className="authentication__container__overlay__form__msg">
+              We have sent an OTP at <p>youremail@gmail.com</p>
+            </div>
             <div className="authentication__container__overlay__form__ibcustomstyling">
-          <InputBox placeholder="Password" type="password" error="" autoFocus />
-          <InputBox placeholder="Re enter Password" type="password" error="" />
-
+              <InputBox type="text" error="" autoFocus />
             </div>
 
+            <a
+              href="
+            #"
+              className="authentication__container__overlay__form__resend"
+            >
+              resend
+            </a>
             <a
               href="#"
               className="authentication__container__overlay__form__btn"
             >
-          Change Password
+              Send recovery email
             </a>
           </div>
         </form>

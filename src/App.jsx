@@ -22,6 +22,8 @@ import NotificationForm from "./screens/NotificationForm";
 import AllocateRewardPopup from "./components/AllocateRewardPopup";
 import RecieptPopup from "./components/RecieptPopup";
 import Signup2nd from "./screens/Signup2nd";
+import OtpEmail from "./screens/OtpEmail";
+import SignupLast from "./screens/Signuplast";
 import SettingsEditProfile from "./screens/SettingsEditProfile";
 
 function Dashboard() {
@@ -80,8 +82,11 @@ export default function App() {
         <Route path="/" element={<Login />} />
         <Route path="/sign_up" element={<Signup />} />
         <Route path="/sign_up_next" element={<Signup2nd />} />
+        <Route path="/sign_up_last" element={<SignupLast />} />
         <Route path="/change_password" element={<ChangePassword />} />
         <Route path="/forgot_password" element={<ForgotPassword />} />
+        <Route path="/otp_email" element={<OtpEmail />} />
+
         <Route path="/dashboard" element={<Dashboard />}>
           <Route path="" element={<DashboardPanel />} />
           <Route

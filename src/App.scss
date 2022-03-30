@@ -1586,6 +1586,45 @@ body {
   color: white;
   text-decoration: none;
 }
+
+.authentication__container__overlay__form__ibcustomstyling {
+  margin: 1.5em 0;
+  width: 100%;
+}
+.authentication__container__overlay__form__msg {
+  color: white;
+  width: 100%;
+  margin: 2em 0;
+}
+.authentication__container__overlay__form__msg p {
+  display: inline;
+  color: #9a7cb8;
+}
+.authentication__container__overlay__form__resend {
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+.authentication__container__overlay__form__img__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 2.5em 0;
+}
+.authentication__container__overlay__form__content__thank {
+  width: 100%;
+  color: #e67fee;
+  text-align: center;
+}
+.authentication__container__overlay__form__content__activation {
+  color: white;
+  width: 100%;
+  text-align: center;
+  margin: 1em  0;
+}
+
+
+
 @media (max-width: 1440px) {
   .dashboard__panel__content__stats__icon {
     padding: 0.7em 1em;

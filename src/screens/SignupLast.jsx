@@ -4,8 +4,7 @@ import authBg from "../assets/authBg.png";
 import { useNavigate } from "react-router-dom";
 import InputBox from "../components/InputBox";
 
-
-export default function Signup2nd() {
+export default function SignupLast() {
   const navigate = useNavigate();
   const [isChecked, setIschecked] = useState(false);
   return (
@@ -15,26 +14,29 @@ export default function Signup2nd() {
         <form action="" className="authentication__container__overlay__form">
           <div className="authentication__container__overlay__form__header">
             <div className="authentication__container__overlay__form__header__heading">
-              Reset Password
+              Account Activation
             </div>
-            <img
-              src={logo}
-              alt="logo"
-              className="authentication__container__overlay__form__header__img"
-            />
           </div>
           <div className="authentication__container__overlay__form__content">
-            <div className="authentication__container__overlay__form__ibcustomstyling">
-          <InputBox placeholder="Password" type="password" error="" autoFocus />
-          <InputBox placeholder="Re enter Password" type="password" error="" />
-
+            <div className="authentication__container__overlay__form__img__container">
+              <img
+                src={logo}
+                alt="logo"
+                className="authentication__container__overlay__form__header__img"
+              />
+            </div>
+            <div className="authentication__container__overlay__form__content__thank">
+              Thank you for signing it up with picode!
+            </div>
+            <div className="authentication__container__overlay__form__content__activation">
+              Your account will be activated within  <b>72 hours</b>
             </div>
 
             <a
               href="#"
               className="authentication__container__overlay__form__btn"
             >
-          Change Password
+              Submit
             </a>
           </div>
         </form>
