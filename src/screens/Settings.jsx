@@ -1,7 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import TableHeaderEntry from "../components/TableHeaderEntry";
 
-function PricingDiscountingTableEntry({ onEdit, onDelete }) {
+function SettingsTableEntry({ onEdit, onDelete }) {
   return (
     <div className="main__content__table__list">
       <div className="main__content__table__list__entry">
@@ -98,7 +99,8 @@ function PricingDiscountingTableEntry({ onEdit, onDelete }) {
   );
 }
 
-export default function PricingDiscounting({ onAdd, onEdit, onDelete }) {
+export default function Settings({ onAdd, onEdit, onDelete }) {
+  const navigate = useNavigate();
   return (
     <div className="main">
       <div className="main__header">
@@ -152,7 +154,9 @@ export default function PricingDiscounting({ onAdd, onEdit, onDelete }) {
             </button>
             <button
               className="main__header__top__buttons__button"
-              onClick={() => {}}
+              onClick={() => {
+                navigate("/dashboard/settings/edit_profile");
+              }}
               style={{ background: "#242424" }}
             >
               Edit Profile
@@ -168,31 +172,31 @@ export default function PricingDiscounting({ onAdd, onEdit, onDelete }) {
             <TableHeaderEntry title="Branch" />
             <TableHeaderEntry title="Reciept" />
           </div>
-          <PricingDiscountingTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <PricingDiscountingTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <PricingDiscountingTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <PricingDiscountingTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <PricingDiscountingTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <PricingDiscountingTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <PricingDiscountingTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <PricingDiscountingTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <PricingDiscountingTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <PricingDiscountingTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <PricingDiscountingTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <PricingDiscountingTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <PricingDiscountingTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <PricingDiscountingTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <PricingDiscountingTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <PricingDiscountingTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <PricingDiscountingTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <PricingDiscountingTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <PricingDiscountingTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <PricingDiscountingTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <PricingDiscountingTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <PricingDiscountingTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <PricingDiscountingTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <PricingDiscountingTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <PricingDiscountingTableEntry onEdit={onEdit} onDelete={onDelete} />
+          <SettingsTableEntry onEdit={onEdit} onDelete={onDelete} />
+          <SettingsTableEntry onEdit={onEdit} onDelete={onDelete} />
+          <SettingsTableEntry onEdit={onEdit} onDelete={onDelete} />
+          <SettingsTableEntry onEdit={onEdit} onDelete={onDelete} />
+          <SettingsTableEntry onEdit={onEdit} onDelete={onDelete} />
+          <SettingsTableEntry onEdit={onEdit} onDelete={onDelete} />
+          <SettingsTableEntry onEdit={onEdit} onDelete={onDelete} />
+          <SettingsTableEntry onEdit={onEdit} onDelete={onDelete} />
+          <SettingsTableEntry onEdit={onEdit} onDelete={onDelete} />
+          <SettingsTableEntry onEdit={onEdit} onDelete={onDelete} />
+          <SettingsTableEntry onEdit={onEdit} onDelete={onDelete} />
+          <SettingsTableEntry onEdit={onEdit} onDelete={onDelete} />
+          <SettingsTableEntry onEdit={onEdit} onDelete={onDelete} />
+          <SettingsTableEntry onEdit={onEdit} onDelete={onDelete} />
+          <SettingsTableEntry onEdit={onEdit} onDelete={onDelete} />
+          <SettingsTableEntry onEdit={onEdit} onDelete={onDelete} />
+          <SettingsTableEntry onEdit={onEdit} onDelete={onDelete} />
+          <SettingsTableEntry onEdit={onEdit} onDelete={onDelete} />
+          <SettingsTableEntry onEdit={onEdit} onDelete={onDelete} />
+          <SettingsTableEntry onEdit={onEdit} onDelete={onDelete} />
+          <SettingsTableEntry onEdit={onEdit} onDelete={onDelete} />
+          <SettingsTableEntry onEdit={onEdit} onDelete={onDelete} />
+          <SettingsTableEntry onEdit={onEdit} onDelete={onDelete} />
+          <SettingsTableEntry onEdit={onEdit} onDelete={onDelete} />
+          <SettingsTableEntry onEdit={onEdit} onDelete={onDelete} />
         </div>
       </div>
     </div>

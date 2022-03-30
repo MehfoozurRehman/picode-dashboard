@@ -10,7 +10,7 @@ export default function DeleteConfirmation({ onClose, onSubmit, isEdit }) {
           type="button"
           onClick={() => onClose(false)}
         >
-          <X size={20} color="currentColor" strokeWidth={4} />
+          <X size={15} color="currentColor" strokeWidth={4} />
         </button>
         <div className="popup__form__heading">
           Do you realy want to delete this

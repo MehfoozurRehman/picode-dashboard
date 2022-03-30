@@ -109,7 +109,6 @@ body {
 }
 .checkbox__content__label {
   font-size: 14px;
-  
 }
 .checkbox__input:hover ~ .checkbox__content .checkbox__content__indicator {
   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
@@ -929,7 +928,7 @@ body {
   left: 0px;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(39, 12, 84, 0.9);
   z-index: 999;
   display: flex;
   align-items: center;
@@ -938,7 +937,7 @@ body {
 .popup__form {
   width: 100%;
   max-width: 500px;
-  background-color: #f9f9ff;
+  background-color: #ffffff;
   position: relative;
   padding: 2em;
   border-radius: 20px;
@@ -952,11 +951,20 @@ body {
   right: 20px;
   background-color: transparent;
   border: none;
-  color: #9a7cb8;
+  padding: 0em;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  border-radius: 50px;
+  background-color: #9a7cb8;
+  color: white;
   cursor: pointer;
 }
 .popup__form__close:hover {
-  color: #9c1828;
+  transition: 300ms ease-in-out;
+  background-color: #9c1828;
 }
 .popup__form__heading {
   color: #232323;
@@ -993,9 +1001,8 @@ body {
 .popup__form__input__field {
   min-height: 40px;
   max-height: 40px;
-  border-radius: 50px;
-  border: 2px solid white;
-  padding: 0em 1.5em;
+  border: none;
+  border-bottom: 1px solid #919191;
   font-size: 12px;
   flex: 1;
   color: #242424;
@@ -1007,6 +1014,7 @@ body {
 }
 .popup__form__input__field:focus {
   border-color: #9a7cb8;
+  border-width: 2px;
 }
 .popup__form__upload__wrapper {
   display: flex;
@@ -1026,7 +1034,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid #919191;
+  border-radius: 10px;
 }
+
 .popup__form__upload__input {
   position: absolute;
   top: 0px;
@@ -1036,10 +1047,14 @@ body {
   cursor: pointer;
   opacity: 0;
 }
+.popup__form__upload__input:hover ~ .popup__form__upload__content {
+  border-color: #9a7cb8;
+  border-width: 2px;
+}
 .popup__form__upload__content__img {
   width: 100%;
   height: 100%;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 .popup__form__button {
   background: #9a7cb8;
@@ -1063,9 +1078,9 @@ body {
   font-size: 12px !important;
 }
 .css-1s2u09g-control {
-  border-radius: 50px !important;
   padding: 0em 0.5em;
   border: none !important;
+  border-bottom: 1px solid #919191 !important;
 }
 .css-14el2xx-placeholder {
   font-size: 12px;
@@ -1233,17 +1248,17 @@ body {
   padding-right: 1em;
 }
 .main__content__form__col .popup__form__input__field {
-  background-color: #f9f9ff;
+  background-color: #ffffff;
 }
 
 .main__content__form__col .css-1s2u09g-control {
-  background-color: #f9f9ff;
+  background-color: #ffffff;
 }
 .main__content__form__col .popup__form__upload {
   margin-bottom: 1em;
 }
 .main__content__form__col .popup__form__upload__content {
-  background-color: #f9f9ff;
+  background-color: #ffffff;
 }
 .css-1qt5ee3-control {
   border-radius: 50px !important;
@@ -1264,10 +1279,8 @@ body {
   width: 100%;
 }
 .ck .ck-toolbar {
-  background-color: #f9f9ff !important;
+  background-color: #f6f6f6 !important;
   border: none !important;
-  border-top-left-radius: 10px !important;
-  border-top-right-radius: 10px !important;
 }
 .ck .ck-toolbar svg {
   width: 15px;
@@ -1279,7 +1292,9 @@ body {
   border-bottom-left-radius: 10px !important;
   border-bottom-right-radius: 10px !important;
   box-shadow: none !important;
-  background-color: #f9f9ff !important;
+  background-color: #ffffff !important;
+  border: 1px solid #919191 !important;
+  border-top: none !important;
 }
 .main__content__row__contact {
   display: flex;
@@ -1492,7 +1507,7 @@ body {
 .authentication__container__overlay__form__header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 .authentication__container__overlay__form__header__heading {
   color: white;
@@ -1512,22 +1527,25 @@ body {
 .authentication__container__overlay__form__header__img {
   width: 80px;
 }
-.authentication__container__overlay__form__content{
-display: flex;
-flex-direction: column; 
-align-items: flex-end; 
+.authentication__container__overlay__form__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
-.authentication__container__overlay__form__forgotpass{
+.authentication__container__overlay__form__forgotpass {
   color: white;
   font-size: 14px;
   font-weight: bold;
   text-decoration: none;
-  
 }
-.authentication__container__overlay__form__btn{
+.authentication__container__overlay__form__forgotpass:hover {
+  transition: 300ms ease-in-out;
+  color: #f6f6f6;
+}
+.authentication__container__overlay__form__btn {
   padding: 1em;
   width: 100%;
-  background-color: #9A7CB8;
+  background-color: #9a7cb8;
   border-radius: 5px;
   text-decoration: none;
   color: white;
@@ -1535,7 +1553,11 @@ align-items: flex-end;
   text-align: center;
   margin: 2em 0;
 }
-.authentication__container__overlay__form__toSignup{
+.authentication__container__overlay__form__btn:hover {
+  transition: 300ms ease-in-out;
+  background-color: #6b4e88;
+}
+.authentication__container__overlay__form__toSignup {
   width: 100%;
   color: white;
   font-weight: bold;
@@ -1543,20 +1565,23 @@ align-items: flex-end;
   text-align: center;
   margin: 1em 0;
 }
-.authentication__container__overlay__form__toSignup a{
- color: #9A7CB8;
+.authentication__container__overlay__form__toSignup a {
+  color: #9a7cb8;
 }
-.authentication__container__overlay__form__content__row{
+.authentication__container__overlay__form__toSignup a:hover {
+  transition: 300ms ease-in-out;
+  color: #6b4e88;
+}
+.authentication__container__overlay__form__content__row {
   display: flex;
   width: 100%;
-
 }
-.authentication__container__overlay__form__checkbox{
+.authentication__container__overlay__form__checkbox {
   margin: 1em 0;
   text-align: left;
   width: 100%;
 }
-.authentication__container__overlay__form__checkbox__anchor{
+.authentication__container__overlay__form__checkbox__anchor {
   font-weight: bold;
   color: white;
   text-decoration: none;

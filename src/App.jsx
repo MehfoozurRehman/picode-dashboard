@@ -22,6 +22,7 @@ import NotificationForm from "./screens/NotificationForm";
 import AllocateRewardPopup from "./components/AllocateRewardPopup";
 import RecieptPopup from "./components/RecieptPopup";
 import Signup2nd from "./screens/Signup2nd";
+import SettingsEditProfile from "./screens/SettingsEditProfile";
 
 function Dashboard() {
   return (
@@ -101,6 +102,16 @@ export default function App() {
             path="settings"
             element={
               <Settings
+                onDelete={setIsDeleteConfirmation}
+                onAdd={setIsAddRecieptPopup}
+                onEdit={setIsEditRecieptPopup}
+              />
+            }
+          />
+          <Route
+            path="settings/edit_profile"
+            element={
+              <SettingsEditProfile
                 onDelete={setIsDeleteConfirmation}
                 onAdd={setIsAddRecieptPopup}
                 onEdit={setIsEditRecieptPopup}
