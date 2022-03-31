@@ -5,7 +5,7 @@ import UploadImage from "../components/UploadImage";
 import TextArea from "../components/TextArea";
 import { useNavigate } from "react-router-dom";
 
-export default function SettingsEditProfile({ heading }) {
+export default function SettingsEditProfile({ heading, onChangePassword }) {
   const navigate = useNavigate();
   return (
     <div className="main">
@@ -26,7 +26,7 @@ export default function SettingsEditProfile({ heading }) {
             <button
               className="main__header__top__buttons__button"
               onClick={() => {
-                navigate("/dashboard/settings/change_pasword");
+                onChangePassword(true);
               }}
               style={{
                 background: "transparent",

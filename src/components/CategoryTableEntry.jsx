@@ -1,5 +1,4 @@
 import React from "react";
-import { Edit, Trash } from "react-feather";
 
 export default function CategoryTableEntry({ onEdit, onDelete }) {
   return (

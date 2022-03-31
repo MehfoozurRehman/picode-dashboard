@@ -25,6 +25,10 @@ import Signup2nd from "./screens/Signup2nd";
 import OtpEmail from "./screens/OtpEmail";
 import SignupLast from "./screens/Signuplast";
 import SettingsEditProfile from "./screens/SettingsEditProfile";
+import CustomerRequests from "./screens/CustomerRequests";
+import ChangePasswordPopup from "./components/ChangePasswordPopup";
+import CreatePromoCodePopup from "./components/CreatePromoCodePopup";
+import HistoryPromos from "./screens/HistoryPromos";
 
 function Dashboard() {
   return (
@@ -37,6 +41,9 @@ function Dashboard() {
 
 export default function App() {
   const [isDeleteConfirmation, setIsDeleteConfirmation] = useState(false);
+  const [isChangePasswordPopup, setIsChangePasswordPopup] = useState(false);
+  const [isCreatePromoCodePopup, setIsCreatePromoCodePopup] = useState(false);
+  const [isEditPromoCodePopup, setIsEditPromoCodePopup] = useState(false);
   const [isAddAllocateRewardPopup, setIsAddAllocateRewardPopup] =
     useState(false);
   const [isEditAllocateRewardPopup, setIsEditAllocateRewardPopup] =
@@ -50,6 +57,25 @@ export default function App() {
         <DeleteConfirmation
           onClose={setIsDeleteConfirmation}
           onSubmit={setIsDeleteConfirmation}
+        />
+      ) : null}
+      {isChangePasswordPopup ? (
+        <ChangePasswordPopup
+          onClose={setIsChangePasswordPopup}
+          onSubmit={setIsChangePasswordPopup}
+        />
+      ) : null}
+      {isCreatePromoCodePopup ? (
+        <CreatePromoCodePopup
+          onClose={setIsCreatePromoCodePopup}
+          onSubmit={setIsCreatePromoCodePopup}
+        />
+      ) : null}
+      {isEditPromoCodePopup ? (
+        <CreatePromoCodePopup
+          isEdit={true}
+          onClose={setIsEditPromoCodePopup}
+          onSubmit={setIsEditPromoCodePopup}
         />
       ) : null}
       {isAddAllocateRewardPopup ? (
@@ -120,6 +146,25 @@ export default function App() {
                 onDelete={setIsDeleteConfirmation}
                 onAdd={setIsAddRecieptPopup}
                 onEdit={setIsEditRecieptPopup}
+                onChangePassword={setIsChangePasswordPopup}
+              />
+            }
+          />
+          <Route
+            path="history_promos"
+            element={
+              <HistoryPromos
+                onEdit={setIsEditPromoCodePopup}
+                onDelete={setIsDeleteConfirmation}
+              />
+            }
+          />
+          <Route
+            path="customer_requests"
+            element={
+              <CustomerRequests
+                onCreate={setIsCreatePromoCodePopup}
+                onDelete={setIsDeleteConfirmation}
               />
             }
           />
