@@ -23,12 +23,12 @@ export default function Login() {
           <div className="authentication__container__overlay__form__content">
             <InputBox placeholder="Email" error="" autoFocus />
             <InputBox placeholder="Password" type="password" error="" />
-            <a
-              href="#"
+            <Link
+              to="/forgot_password"
               className="authentication__container__overlay__form__forgotpass"
             >
               Forgot Password?
-            </a>
+            </Link>
             <Link
               to="/dashboard"
               className="authentication__container__overlay__form__btn"
@@ -36,7 +36,7 @@ export default function Login() {
               Login
             </Link>
             <div className="authentication__container__overlay__form__toSignup">
-              Don't have an account? <a href="#"> Sign Up</a>
+              Don't have an account? <Link to="/sign_up"> Sign Up</Link>
             </div>
           </div>
         </div>

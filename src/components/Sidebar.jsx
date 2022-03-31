@@ -18,7 +18,10 @@ export default function Sidebar({}) {
             <div className="container__sidebar__header__content__name">
               Dayyan Shahid
             </div>
-            <Link to="/" className="container__sidebar__header__content__link">
+            <Link
+              to="/dashboard/settings/edit_profile"
+              className="container__sidebar__header__content__link"
+            >
               Edit Profile
             </Link>
           </div>

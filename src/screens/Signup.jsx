@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.png";
 import authBg from "../assets/authBg.png";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import InputBox from "../components/InputBox";
 import CheckBox from "../components/Checkbox";
 
@@ -49,7 +49,13 @@ export default function Signup() {
                     className="checkbox__content__label"
                     style={{ color: "white" }}
                   >
-                    I Agree to the <a href="#" className="authentication__container__overlay__form__checkbox__anchor">Partnership Agreement</a>
+                    I Agree to the{" "}
+                    <a
+                      href="#"
+                      className="authentication__container__overlay__form__checkbox__anchor"
+                    >
+                      Partnership Agreement
+                    </a>
                   </div>
                 }
                 labelColor="#ffffff"
@@ -62,7 +68,7 @@ export default function Signup() {
                 }}
               />
             </div>
-         
+
             <a
               href="#"
               className="authentication__container__overlay__form__btn"
@@ -70,7 +76,7 @@ export default function Signup() {
               Next
             </a>
             <div className="authentication__container__overlay__form__toSignup">
-              Already have an account? <a href="#"> Log In</a>
+              Already have an account? <Link to="/"> Log In</Link>
             </div>
           </div>
         </form>

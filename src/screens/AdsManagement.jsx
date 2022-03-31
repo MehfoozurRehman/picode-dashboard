@@ -1,10 +1,52 @@
-import React from "react";
+import React, { useState } from "react";
 import { Search } from "react-feather";
 import { Link } from "react-router-dom";
 import CategoryTableEntry from "../components/CategoryTableEntry";
 import TableHeaderEntry from "../components/TableHeaderEntry";
+import addPic from "../assets/addPic.png";
+
+function NavLink({ title, isNav, setIsNav }) {
+  return (
+    <button
+      onClick={() => {
+        setIsNav(title);
+      }}
+      className={
+        isNav === title
+          ? "main__content__add__managment__nav__wrapper__btn main__content__add__managment__nav__wrapper__btn__selected"
+          : "main__content__add__managment__nav__wrapper__btn"
+      }
+    >
+      {title}
+    </button>
+  );
+}
+
+function AddManagmenCard({ value, title }) {
+  return (
+    <Link
+      to="/dashboard/payment"
+      className="main__content__add__managment__content__card"
+    >
+      <img
+        src={addPic}
+        alt="addPic"
+        className="main__content__add__managment__content__card__img"
+      />
+      <div className="main__content__add__managment__content__card__overlay">
+        <div className="main__content__add__managment__content__card__overlay__heading">
+          {value}
+        </div>
+        <div className="main__content__add__managment__content__card__overlay__sub__heading">
+          {title}
+        </div>
+      </div>
+    </Link>
+  );
+}
 
 export default function AdsManagement({ onAdd, onEdit, onDelete }) {
+  const [isNav, setIsNav] = useState("Headline");
   return (
     <div className="main">
       <div className="main__header">
@@ -51,58 +93,22 @@ export default function AdsManagement({ onAdd, onEdit, onDelete }) {
             {/* <button className="main__header__top__buttons__button">
               Bulk Add
             </button> */}
-            <button
-              className="main__header__top__buttons__button"
-              onClick={() => {
-                onAdd(true);
-              }}
-            >
-              Add New
-            </button>
+            {/* */}
           </div>
         </div>
       </div>
       <div className="main__content">
-        <div className="main__content__table">
-          <div className="main__content__table__header">
-            <TableHeaderEntry title="Action" />
-            <TableHeaderEntry title="Active Image" />
-            <TableHeaderEntry title="Inactive Image" />
-            <TableHeaderEntry title="Name" />
+        <div className="main__content__add__managment">
+          <div className="main__content__add__managment__nav__wrapper">
+            <NavLink isNav={isNav} setIsNav={setIsNav} title="Headline" />
+            <NavLink isNav={isNav} setIsNav={setIsNav} title="Banners" />
           </div>
-          <CategoryTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <CategoryTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <CategoryTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <CategoryTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <CategoryTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <CategoryTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <CategoryTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <CategoryTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <CategoryTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <CategoryTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <CategoryTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <CategoryTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <CategoryTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <CategoryTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <CategoryTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <CategoryTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <CategoryTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <CategoryTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <CategoryTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <CategoryTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <CategoryTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <CategoryTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <CategoryTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <CategoryTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <CategoryTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <CategoryTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <CategoryTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <CategoryTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <CategoryTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <CategoryTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <CategoryTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <CategoryTableEntry onEdit={onEdit} onDelete={onDelete} />
-          <CategoryTableEntry onEdit={onEdit} onDelete={onDelete} />
+          <div className="main__content__add__managment__content">
+            <AddManagmenCard title="Hourly" value="$34" />
+            <AddManagmenCard title="Daily" value="$34" />
+            <AddManagmenCard title="Weekly" value="$34" />
+            <AddManagmenCard title="Daywise" value="$34" />
+          </div>
         </div>
       </div>
     </div>

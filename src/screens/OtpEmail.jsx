@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.png";
 import authBg from "../assets/authBg.png";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import InputBox from "../components/InputBox";
 
 export default function OtpEmail() {
@@ -37,12 +37,12 @@ export default function OtpEmail() {
             >
               resend
             </a>
-            <a
-              href="#"
+            <Link
+              to="/"
               className="authentication__container__overlay__form__btn"
             >
-              Send recovery email
-            </a>
+              Submit
+            </Link>
           </div>
         </form>
       </div>

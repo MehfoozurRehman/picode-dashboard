@@ -29,6 +29,8 @@ import CustomerRequests from "./screens/CustomerRequests";
 import ChangePasswordPopup from "./components/ChangePasswordPopup";
 import CreatePromoCodePopup from "./components/CreatePromoCodePopup";
 import HistoryPromos from "./screens/HistoryPromos";
+import Payment from "./screens/Payment";
+import CardPopup from "./components/CardPopup";
 
 function Dashboard() {
   return (
@@ -50,6 +52,8 @@ export default function App() {
     useState(false);
   const [isAddRecieptPopup, setIsAddRecieptPopup] = useState(false);
   const [isEditRecieptPopup, setIsEditRecieptPopup] = useState(false);
+  const [isAddCardPopup, setIsAddCardPopup] = useState(false);
+  const [isEditCardPopup, setIsEditCardPopup] = useState(false);
 
   return (
     <>
@@ -76,6 +80,16 @@ export default function App() {
           isEdit={true}
           onClose={setIsEditPromoCodePopup}
           onSubmit={setIsEditPromoCodePopup}
+        />
+      ) : null}
+      {isAddCardPopup ? (
+        <CardPopup onClose={setIsAddCardPopup} onSubmit={setIsAddCardPopup} />
+      ) : null}
+      {isEditCardPopup ? (
+        <CardPopup
+          isEdit={true}
+          onClose={setIsEditCardPopup}
+          onSubmit={setIsEditCardPopup}
         />
       ) : null}
       {isAddAllocateRewardPopup ? (
@@ -175,6 +189,16 @@ export default function App() {
           <Route
             path="ad_management"
             element={<AdsManagement onDelete={setIsDeleteConfirmation} />}
+          />
+          <Route
+            path="payment"
+            element={
+              <Payment
+                onAdd={setIsAddCardPopup}
+                onEdit={setIsEditCardPopup}
+                onDelete={setIsDeleteConfirmation}
+              />
+            }
           />
           <Route
             path="payment_history"
