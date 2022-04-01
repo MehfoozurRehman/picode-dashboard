@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import logo from "../assets/logo.png";
 import authBg from "../assets/authBg.png";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import InputBox from "../components/InputBox";
 
 export default function Login() {

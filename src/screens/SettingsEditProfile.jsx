@@ -1,8 +1,5 @@
 import React from "react";
 import { ArrowLeft } from "react-feather";
-import Select from "react-select";
-import UploadImage from "../components/UploadImage";
-import TextArea from "../components/TextArea";
 import { useNavigate } from "react-router-dom";
 
 export default function SettingsEditProfile({ heading, onChangePassword }) {

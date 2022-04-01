@@ -1,25 +1,11 @@
 import React from "react";
-import { Search } from "react-feather";
-import { Link } from "react-router-dom";
-import CategoryTableEntry from "../components/CategoryTableEntry";
-import TableHeaderEntry from "../components/TableHeaderEntry";
 
 export default function CallUs({ onAdd, onEdit, onDelete }) {
   return (
     <div className="main">
       <div className="main__header">
         <div className="main__header__top">
-          <div className="main__header__top__heading">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.311 33.353">
-              <path
-                id="Icon_zocial-call"
-                data-name="Icon zocial-call"
-                d="M3.337,9.491a2.454,2.454,0,0,1,.625-1.333l5-5q.584-.5.875.167l4.04,7.579a1.09,1.09,0,0,1-.208,1.291L11.833,14.03a2.072,2.072,0,0,0-.583,1.291,6.357,6.357,0,0,0,1.291,3.207,27.384,27.384,0,0,0,2.54,3.333l1.291,1.331c.389.389.888.868,1.5,1.437a25.142,25.142,0,0,0,3.018,2.249,6.755,6.755,0,0,0,3.311,1.4,1.813,1.813,0,0,0,1.333-.541L27.7,25.566a.915.915,0,0,1,1.248-.167l7.289,4.289a.609.609,0,0,1,.333.437.532.532,0,0,1-.167.479l-5,5a2.447,2.447,0,0,1-1.331.623,10.075,10.075,0,0,1-4.6-.562,20.826,20.826,0,0,1-4.746-2.27q-2.186-1.415-4.06-2.872t-3-2.5l-1.083-1.042q-.416-.416-1.1-1.145t-2.4-2.872a41.824,41.824,0,0,1-2.957-4.185,24.415,24.415,0,0,1-2.166-4.643A9.878,9.878,0,0,1,3.337,9.491Z"
-                transform="translate(-3.267 -2.947)"
-              />
-            </svg>
-            Call Us
-          </div>
+          <div className="main__header__top__heading">Call Us</div>
           <div className="main__header__top__buttons"></div>
         </div>
       </div>

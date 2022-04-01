@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.png";
 import authBg from "../assets/authBg.png";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import InputBox from "../components/InputBox";
 import CheckBox from "../components/Checkbox";
 
 export default function Signup() {
-  const navigate = useNavigate();
   const [isChecked, setIschecked] = useState(false);
   return (
     <div className="authentication__container">

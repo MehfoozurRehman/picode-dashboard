@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import { Route, Routes, Outlet } from "react-router-dom";
 import "./App.scss";
-
 import Login from "./screens/Login";
 import Signup from "./screens/Signup";
 import ChangePassword from "./screens/ChangePassword";
 import ForgotPassword from "./screens/ForgotPassword";
 import Sidebar from "./components/Sidebar";
 import DashboardPanel from "./screens/DashboardPanel";
-
 import DeleteConfirmation from "./components/DeleteConfirmation";
 import AllocateRewards from "./screens/AllocateRewards";
 import InvoiceBills from "./screens/InvoiceBills";
