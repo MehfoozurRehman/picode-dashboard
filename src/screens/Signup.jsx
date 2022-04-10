@@ -68,12 +68,12 @@ export default function Signup() {
               />
             </div>
 
-            <a
-              href="#"
+            <Link
+              to="/sign_up_next"
               className="authentication__container__overlay__form__btn"
             >
               Next
-            </a>
+            </Link>
             <div className="authentication__container__overlay__form__toSignup">
               Already have an account? <Link to="/"> Log In</Link>
             </div>

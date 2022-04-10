@@ -9,6 +9,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
 }
 .auth__container {
   width: 100%;
@@ -1569,6 +1570,18 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  max-height: 400px;
+  overflow: auto;
+}
+.authentication__container__overlay__form__content::-webkit-scrollbar {
+  width: 5px;
+}
+.authentication__container__overlay__form__content::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 50px;
+}
+.authentication__container__overlay__form__content::-webkit-scrollbar-track {
+  background-color: transparent;
 }
 .authentication__container__overlay__form__forgotpass {
   color: white;
@@ -1880,6 +1893,99 @@ body {
 .main__content__payment__right__bottom__right {
   font-size: 22px;
   font-weight: 500;
+}
+.authentication__container__overlay__form__content__receipt {
+  display: flex;
+  width: 100%;
+  margin-bottom: 1em;
+}
+.authentication__container__overlay__form__content__receipt__col {
+  width: 60%;
+  margin-right: 2em;
+}
+.authentication__container__overlay__form__content__receipt__col__row {
+  display: flex;
+  align-items: center;
+}
+.authentication__container__overlay__form__content__receipt__col__row__upload__btn {
+  position: relative;
+  flex: 1;
+  margin-right: 1em;
+}
+.authentication__container__overlay__form__content__receipt__col__row__upload__btn__input {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.authentication__container__overlay__form__content__receipt__col__row__upload__btn__content {
+  width: 100%;
+  background-color: #9a7cb87e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em;
+  color: white;
+  border-radius: 5px;
+}
+.authentication__container__overlay__form__content__receipt__col__row__upload__btn__content__icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #9a7cb8;
+  margin-right: 1em;
+}
+.authentication__container__overlay__form__content__receipt__col__row__upload__btn__input:hover
+  ~ .authentication__container__overlay__form__content__receipt__col__row__upload__btn__content {
+  transition: 300ms ease-in-out;
+  background-color: #9a7cb8;
+}
+.authentication__container__overlay__form__content__receipt__col__row__upload__btn__content:hover {
+  transition: 300ms ease-in-out;
+  background-color: #9a7cb8;
+  cursor: pointer;
+}
+.authentication__container__overlay__form__content__receipt__col:last-child {
+  width: 40%;
+  margin-right: 0em;
+  position: relative;
+  padding-top: 0.3em;
+}
+.authentication__container__overlay__form__content__receipt__col__button {
+  width: 35px;
+  height: 35px;
+  border-radius: 50px;
+  background-color: #9a7cb8;
+  border: none;
+  padding: 0em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  cursor: pointer;
+}
+.authentication__container__overlay__form__content__receipt__col__button:hover {
+  transition: 300ms ease-in-out;
+  background-color: #6f528b;
+}
+.authentication__container__overlay__form__content__receipt__col__img {
+  width: 100%;
+  border-radius: 10px;
+}
+.authentication__container__overlay__form__content__image__wrapper {
+  position: relative;
+  width: 50%;
+  margin: 0em auto;
 }
 @media (max-width: 1440px) {
   .dashboard__panel__content__stats__icon {

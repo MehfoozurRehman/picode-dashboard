@@ -1,13 +1,14 @@
 import React from "react";
 import logo from "../assets/logo.png";
 import authBg from "../assets/authBg.png";
+import { Link } from "react-router-dom";
 
 export default function SignupLast() {
   return (
     <div className="authentication__container">
       <img src={authBg} alt="" className="authentication__container__img" />
       <div className="authentication__container__overlay">
-        <form action="" className="authentication__container__overlay__form">
+        <form className="authentication__container__overlay__form">
           <div className="authentication__container__overlay__form__header">
             <div className="authentication__container__overlay__form__header__heading">
               Account Activation
@@ -27,13 +28,12 @@ export default function SignupLast() {
             <div className="authentication__container__overlay__form__content__activation">
               Your account will be activated within <b>72 hours</b>
             </div>
-
-            <a
-              href="#"
+            <Link
+              to="/dashboard"
               className="authentication__container__overlay__form__btn"
             >
               Submit
-            </a>
+            </Link>
           </div>
         </form>
       </div>

@@ -29,6 +29,7 @@ import CreatePromoCodePopup from "./components/CreatePromoCodePopup";
 import HistoryPromos from "./screens/HistoryPromos";
 import Payment from "./screens/Payment";
 import CardPopup from "./components/CardPopup";
+import Signup3rd from "./screens/Signup3rd";
 
 function Dashboard() {
   return (
@@ -120,6 +121,7 @@ export default function App() {
         <Route path="/" element={<Login />} />
         <Route path="/sign_up" element={<Signup />} />
         <Route path="/sign_up_next" element={<Signup2nd />} />
+        <Route path="/sign_up_second_last" element={<Signup3rd />} />
         <Route path="/sign_up_last" element={<SignupLast />} />
         <Route path="/change_password" element={<ChangePassword />} />
         <Route path="/forgot_password" element={<ForgotPassword />} />
